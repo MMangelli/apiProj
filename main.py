@@ -14,7 +14,7 @@ response = requests.get(url, headers=headers, params=querystring)
 
 response_json = json.loads(response.text)
 
-tempCelsius = (response_json['data'][0]['temp']) #due to the json having multi layers,  we need the [0] index to grab values that are in the list object.
+tempCelsius = (response_json['data'][0]['temp'])                             #due to the json having multi layers,  we need the [0] index to grab values that are in the list object.
 tempFarenheit = round((tempCelsius * 9/5) + 32)
 
 print(tempFarenheit)
