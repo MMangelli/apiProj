@@ -4,14 +4,8 @@ import urllib.parse
 
 url = "https://weatherbit-v1-mashape.p.rapidapi.com/forecast/3hourly"
 
-# address = 'Durham, North Carolina, NC, 27703'
-# osmURL = 'https://nominatim.openstreetmap.org/search?q=' + urllib.parse.quote(address) + '&format=json'
-# osmURLresponse = requests.get(osmURL)
-# osmURLresponse_json = json.loads(osmURLresponse.text)
-# print(osmURLresponse_json[0]["lat"])
-# print(osmURLresponse_json[0]["lon"])
 
-
+#figure out how to reference a separate py file to grab the lat long variables
 querystring = {"lat":"35.5","lon":"-78.5"}
 
 headers = {
