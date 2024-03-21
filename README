@@ -1,1 +1,9 @@
-Project is created for testing pulling weather api data
+Project is created for testing a Weather API.
+
+main.py can be ran to submit a location and have it geocode coordinates to grab temperature values.
+
+Instructions  
+
+Run pip install -r requirements to get necessary packages
+
+Run main.py

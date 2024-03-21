@@ -1,15 +1,23 @@
 import requests
+import os
+from dotenv import load_dotenv
 import json
 import urllib.parse
+from latlong import get_lat_long
 
+load_dotenv()
+api_key = os.getenv("API_KEY")
 url = "https://weatherbit-v1-mashape.p.rapidapi.com/forecast/3hourly"
 
 
 #figure out how to reference a separate py file to grab the lat long variables
-querystring = {"lat":"35.5","lon":"-78.5"}
+location = input("Type a Location as City, State \n")
+latitude, longitude = get_lat_long(location)
+
+querystring = {"lat": latitude,"lon": longitude}
 
 headers = {
-	"X-RapidAPI-Key": "4e50b14185msh01ad6d45b3f780fp1b0324jsn37cdfa6d2a57",
+	"X-RapidAPI-Key": api_key,
 	"X-RapidAPI-Host": "weatherbit-v1-mashape.p.rapidapi.com"
 }
 
